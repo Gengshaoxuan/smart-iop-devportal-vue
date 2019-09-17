@@ -1,7 +1,8 @@
 <template>
   <div class="index">
     <h1>个人中心--Mock示例</h1>
-    <ul v-for="(item, key) in newsListShow" :key="key">
+    <ul v-for="(item, key) in newsListShow"
+        :key="key">
       <li>{{item.title}}</li>
     </ul>
   </div>
@@ -11,16 +12,16 @@
 import api from "../../utils/api.js";
 
 export default {
-  data() {
+  data () {
     return {
       newsListShow: []
     };
   },
-  created() {
+  created () {
     this.setNewsApi();
   },
   methods: {
-    setNewsApi: function() {
+    setNewsApi: function () {
       api.JH_news("/news/index", "type=top&key=123456").then(res => {
         console.log(res);
         this.newsListShow = res.articles;

@@ -9,77 +9,103 @@ import Message from '@/views/message/message'
 import PersonCenter from '@/views/personCenter/personCenter'
 import MyApplication from '@/views/myApplication/myApplication'
 import ProductIntroduction from '@/views/productCenter/productIntroduction'
+import NewsCenter from '@/views/newsCenter/newsCenter'
+import NewsCenterDetail from '@/views/newsCenter/newsCenterDetail'
+import agreement from '@/views/agreement/agreement'
+import ResetPassword from '@/views/resetPassword/resetPassword'
 
 Vue.use(Router)
 
-export default new Router(
-  {
+export default new Router({
     mode: 'history',
 
-    routes: [
-      {
-        //重定向
-        path: '*',
-        redirect: Home
-      },
-      {
-        //  ‘/’匹配主页
-        path: '/',
-        component: Home,
-      },
-      {
-        //主页
-        path: '/home',
-        name: 'Home',
-        component: Home
-      },
-      {
-        //登录
-        path: '/login',
-        name: 'login',
-        component: Login
-      },
-      {
-        //注册
-        path: '/register',
-        name: 'register',
-        component: Register
-      },
-      {
-        //帮助中心
-        path: '/helpCenter',
-        name: 'helpCenter',
-        component: HelpCenter
-      },
-      {
-        //产品中心
-        path: '/productCenter',
-        name: 'productCenter',
-        component: ProductCenter
-      },
-      {
-        //站内信
-        path: '/message',
-        name: 'Message',
-        component:Message 
-      },
-      {
-        //个人中心
-        path: '/personCenter',
-        name: 'PersonCenter',
-        component: PersonCenter
-      },{
-        //我的应用
-        path: '/myApplication',
-        name: 'MyApplication',
-        component: MyApplication
-      },
-      {
-        //产品介绍
-        path: '/productIntroduction',
-        name: 'ProductIntroduction',
-        component: ProductIntroduction
-      }
-      
+    routes: [{
+            //重定向
+            path: '*',
+            redirect: Home
+        },
+        {
+            //  ‘/’匹配主页
+            path: '/',
+            component: Home,
+        },
+        {
+            //主页
+            path: '/home',
+            name: 'Home',
+            component: Home
+        },
+        {
+            //登录
+            path: '/login',
+            name: 'login',
+            component: Login
+        },
+        {
+            //注册
+            path: '/register',
+            name: 'register',
+            component: Register
+        },
+        {
+            //帮助中心
+            path: '/helpCenter',
+            name: 'helpCenter',
+            component: HelpCenter
+        },
+        {
+            //产品中心
+            path: '/productCenter',
+            name: 'productCenter',
+            component: ProductCenter
+        },
+        {
+            //站内信
+            path: '/message',
+            name: 'Message',
+            component: Message
+        },
+        {
+            //个人中心
+            path: '/personCenter',
+            name: 'PersonCenter',
+            component: PersonCenter
+        }, {
+            //我的应用
+            path: '/myApplication',
+            name: 'MyApplication',
+            component: MyApplication
+        },
+        {
+            //产品介绍
+            path: '/productIntroduction',
+            name: 'ProductIntroduction',
+            component: ProductIntroduction
+        },
+        {
+            //新闻中心
+            path: '/newsCenter',
+            name: 'NewsCenter',
+            component: NewsCenter
+        },
+        {
+            //新闻中心详情
+            path: '/newsCenterDetail',
+            name: 'NewsCenterDetail',
+            component: NewsCenterDetail
+        },
+        {
+            //注册协议
+            path: '/agreement',
+            name: 'agreement',
+            component: agreement
+        },
+        {
+            //忘记密码
+            path: '/resetPassword',
+            name: 'ResetPassword',
+            component: ResetPassword
+        }
+
     ]
-  })
+})
