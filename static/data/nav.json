@@ -1,0 +1,15 @@
+{
+    "navData": [{
+            "title": "基本信息",
+            "url": "/basicInformation"
+        },
+        {
+            "title": "实名认证",
+            "url": "/certification"
+        },
+        {
+            "title": "消息通知",
+            "url": "/notify"
+        }
+    ]
+}

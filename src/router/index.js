@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Home from '@/views/home/home'
 import Login from '@/views/login/login'
 import Register from '@/views/login/register'
+import Certification from '@/views/certification/certification'
+import BasicInformation from '@/views/basicInformation/basicInformation'
+import Notify from '@/views/notify/notify'
 import HelpCenter from '@/views/helpCenter/helpCenter'
 import ProductCenter from '@/views/productCenter/productCenter'
 import Message from '@/views/message/message'
@@ -13,6 +16,9 @@ import NewsCenter from '@/views/newsCenter/newsCenter'
 import NewsCenterDetail from '@/views/newsCenter/newsCenterDetail'
 import agreement from '@/views/agreement/agreement'
 import ResetPassword from '@/views/resetPassword/resetPassword'
+import UpdatePhone from '@/views/updatePhone/updatePhone'
+import UpdateEmail from '@/views/updateEmail/updateEmail'
+import UpdatePass from '@/views/updatePass/updatePass'
 
 Vue.use(Router)
 
@@ -69,7 +75,26 @@ export default new Router({
             //个人中心
             path: '/personCenter',
             name: 'PersonCenter',
-            component: PersonCenter
+            component: PersonCenter,
+            children: [{
+                    //基本信息
+                    path: '/basicInformation',
+                    name: 'basicInformation',
+                    component: BasicInformation
+                },
+                {
+                    //实名认证
+                    path: '/certification',
+                    name: 'certification',
+                    component: Certification
+                },
+                {
+                    //消息通知
+                    path: '/notify',
+                    name: 'notify',
+                    component: Notify
+                },
+            ]
         }, {
             //我的应用
             path: '/myApplication',
@@ -105,6 +130,24 @@ export default new Router({
             path: '/resetPassword',
             name: 'ResetPassword',
             component: ResetPassword
+        },
+        {
+            //修改手机号
+            path: '/updatePhone',
+            name: 'UpdatePhone',
+            component: UpdatePhone
+        },
+        {
+            //修改邮箱
+            path: '/updateEmail',
+            name: 'UpdateEmail',
+            component: UpdateEmail
+        },
+        {
+            //修改密码
+            path: '/updatePass',
+            name: 'UpdatePass',
+            component: UpdatePass
         }
 
     ]
